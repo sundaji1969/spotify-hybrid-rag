@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  streamlit-rag:
+    build: .
+    container_name: spotify-hybrid-rag
+    restart: always
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
